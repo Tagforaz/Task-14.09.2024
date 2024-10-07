@@ -25,11 +25,34 @@ namespace Task_14._09._2024
             //Console.WriteLine("Zehmet olmasa, Ad ve Soyad qeyd edin:");
             //fullName = Console.ReadLine();
             //FullName(fullName);
+            ////Alternativ
+            //string word = "Hikmet Abbasov";
+            //ChangeStr(ref word);
+            //Console.WriteLine(word);
+            //static void ChangeStr(ref string str)
+            //{
+            //    string newStr = "";
+            //    for (int i = 0; i < str.Length; i++)
+            //    {
+            //      if(str[i] != ' ')
+            //        {
+            //            newStr += str[i];
+            //        }     
+            //    }
+            //    str = newStr;
+            //}
 
             //Task4
             //int num = 60;
             //int[] nums = { 1, 2, 3, 4, 5, };
             //ArrayLength(num, nums);
+            ////Alternativ
+            int[] numbers = { 3, 7, 1 };
+            AddArr(ref numbers, 9);
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
 
             #region Optional Task1
             //int num = 12;
@@ -122,14 +145,14 @@ namespace Task_14._09._2024
             //    string bosluq = "";
             //    for (int i = 0; i < fullName.Length; i++)
             //    {
-            //     if (fullName[i] != ' ' )
+            //        if (fullName[i] != ' ')
             //        {
             //            bosluq += fullName[i];
-            //        } 
+            //        }
 
             //    }
 
-            //    Console.WriteLine($"Netice:{ bosluq}");
+            //    Console.WriteLine($"Netice:{bosluq}");
 
 
             //}
@@ -157,6 +180,19 @@ namespace Task_14._09._2024
             //        Console.WriteLine(newNums[i]);
             //    }
             //}
+
+            ////Alternativ
+            static void AddArr(ref int[] array,int num)
+            {
+                int[] newArr = new int[array.Length+1];
+                for (int i = 0; i < array.Length; i++)
+                {
+                    newArr[i] = array[i];
+                }
+                newArr[array.Length] = num;
+                array = newArr;
+            }
+            
             #endregion
 
         }
